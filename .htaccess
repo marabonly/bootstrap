@@ -1,0 +1,6 @@
+Options All -Indexes
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^localhost [NC]
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
